@@ -26,6 +26,6 @@ balanced_latin_square-*.tar
 /tmp/
 
 # Dialyxir output
-/priv/plts/*.plt
-/priv/plts/*.plt.hash
+/priv/plts/project.plt
+/priv/plts/project.plt.hash
 
