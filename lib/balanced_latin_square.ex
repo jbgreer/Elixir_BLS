@@ -32,7 +32,9 @@ defmodule BalancedLatinSquare do
   ## Parameters
       `n`: positive integer representing the number of conditions
 
-  ## Returns a non-empty list of a non-empty list of positive integers
+  ## Returns
+     - a non-empty list of a non-empty list of positive integers
+     - raises an ArgumentError exception when agument < 1
 
   ## Examples
       iex> BalancedLatinSquare.bls(1)
