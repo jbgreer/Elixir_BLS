@@ -11,6 +11,13 @@ defmodule BalancedLatinSquare.MixProject do
       # relocate dialyzer output to priv/plts directory
       dialyzer: [
         plt_file: {:no_warn, "priv/plts/project.plt"}
+      ],
+      test_coverage: [tool: ExCoveralls, export: "cov"],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.details": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
       ]
     ]
   end
@@ -26,8 +33,9 @@ defmodule BalancedLatinSquare.MixProject do
   defp deps do
     [
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.17.1", only: [:dev, :test], runtime: false}
+      {:dialyxir, "~> 1.4.1", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.17.1", only: [:dev, :test], runtime: false},
+      {:doctor, "~> 0.21.0", only: [:dev], runtime: false}
     ]
   end
 end
