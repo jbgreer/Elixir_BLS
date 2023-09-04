@@ -24,3 +24,8 @@ balanced_latin_square-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Dialyxir output
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
+
