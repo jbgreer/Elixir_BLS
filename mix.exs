@@ -12,6 +12,10 @@ defmodule BalancedLatinSquare.MixProject do
       dialyzer: [
         plt_file: {:no_warn, "priv/plts/project.plt"}
       ],
+      docs: [
+        main: "BalancedLatinSquare",
+        extras: ["README.md"]
+      ],
       test_coverage: [tool: ExCoveralls, export: "cov"],
       preferred_cli_env: [
         coveralls: :test,
@@ -35,6 +39,7 @@ defmodule BalancedLatinSquare.MixProject do
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4.1", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.17.1", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:doctor, "~> 0.21.0", only: [:dev], runtime: false}
     ]
   end
